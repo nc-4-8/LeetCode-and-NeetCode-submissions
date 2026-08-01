@@ -8,9 +8,9 @@ class Solution {
             return nums[i];
         }
 
-        int leftSide = nums[i] - getScore(nums, i+1, j);
-        int rightSide = nums[j] - getScore(nums, i, j-1);
-
-        return Math.max(leftSide, rightSide);
+    return Math.max(
+    nums[i] - getScore(nums, i + 1, j),
+    nums[j] - getScore(nums, i, j - 1)
+);
     }
 }
