@@ -8,5 +8,6 @@ class Solution(object):
     def check(self, date):
         a = int(date[:2])
         b = int(date[3:])
-        return (275 * a)//9 - 2 * ((a+9)//12) + b - 30
+        days = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
+        return sum(days[:a-1]) + b
 
